@@ -45,14 +45,14 @@ namespace HeszMilan
 
             Console.WriteLine("5. Feladat:");
             Console.WriteLine("Írj be egy egész számot: ");
-            int szam = 0;
+            int szam = int.Parse(Console.ReadLine());
             var keresH = bolygo.Where(p => p.HoldSzama > szam);
             if (keresH.Count() != 0)
             {
                 Console.WriteLine($"a következő bolygónak van {keresH}-nál/nél több holdja: {szam}");
-                foreach (var f in keresH)
+                foreach (var a in keresH)
                 {
-                    Console.Write($"'{f.}';");
+                    Console.Write($"'{a.}';");
                 }
             }
             else Console.WriteLine($"Nincs ilyen ο(=•ω＜=)ρ⌒☆");
