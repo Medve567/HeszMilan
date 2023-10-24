@@ -49,7 +49,7 @@ namespace HeszMilan
             var keresH = bolygo.Where(p => p.HoldSzama > szam);
             if (keresH.Count() != 0)
             {
-                Console.WriteLine($"a következő bolygónak van {keresH}-nál/nél több holdja: {i.Nev}");
+                Console.WriteLine($"a következő bolygónak van {keresH}-nál/nél több holdja: {szam}");
                 foreach (var f in keresH)
                 {
                     Console.Write($"'{f.}';");
